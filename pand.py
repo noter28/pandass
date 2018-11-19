@@ -7,12 +7,14 @@ print(df)
 '''
 df1=pd.read_csv('df1.csv', sep=',')
 df2=pd.read_csv('df2.csv', sep=',')
-country = ['UA',u'RF',u'RF',u'RF',u'RF']
+country = ['UA','RF','BL','RF','RF']
 df2.insert(1,'country',country)
+#print(df2)
+t=(df2[df2.country == 'BL'])
+df2=df2.append(t)
 print(df2)
-
-
-
+res = df2.merge(df1, 'left', on='shop')
+print(res)
 
 '''
 print(df.columns)
