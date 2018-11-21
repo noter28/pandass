@@ -15,7 +15,8 @@ df2=df2.append(t)
 print(df2)
 res = df2.merge(df1, 'left', on='shop')
 print(res)
-
+a=df2.country.value_counts()
+print(a)
 '''
 print(df.columns)
 #print(df.dtypes)
